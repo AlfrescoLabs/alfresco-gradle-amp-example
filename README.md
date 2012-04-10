@@ -48,7 +48,7 @@ Installing the AMP
 Viewing the Example
 -------------------
 
-The endpoint obviously depends on your environment and where you've installed the AMP but 
+The endpoint depends on your environment and where you've installed the AMP but 
 here's an example URL:
 
 	http://localhost:8080/share/jsp/example.jsp
