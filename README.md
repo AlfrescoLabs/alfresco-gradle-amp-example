@@ -16,7 +16,9 @@ for full details on use of the plugins.
 
 ### Requirements
 
-The project currently requires that Gradle and [Maven](http://maven.apache.org) be installed.
+The project currently requires that Gradle and [Maven](http://maven.apache.org) be installed and that 
+[alfresco-gradle-plugins](https://github.com/Alfresco/alfresco-gradle-plugins) be available in your
+local maven repository.
 
 
 Packaging as an AMP
