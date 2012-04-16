@@ -19,11 +19,12 @@ dependencies {
 }
 
 buildscript {
-	repositories {
-		mavenLocal()
-	}
+//	repositories {
+//		mavenLocal()
+//	}
 	dependencies {
-		classpath group: 'org.alfresco.gradle', name: 'alfresco-gradle-plugins', version: '1.0-SNAPSHOT'
+//		classpath group: 'org.alfresco.gradle', name: 'alfresco-gradle-plugins', version: '1.0-SNAPSHOT'
+		classpath fileTree(dir: 'lib-compile', include: '**/*.jar')
 	}
 }
 buildscript {
