@@ -24,7 +24,7 @@ public class MyMessageTest {
 	@Test
 	public void testGetMessage() {
 		MyMessage myMessage = new MyMessage();
-		assertEquals("Yes, another Hello World!", myMessage.getMessage());
+		assertEquals("Yes, another Hello World! (I live in a jar)", myMessage.getMessage());
 	}
 
 }
