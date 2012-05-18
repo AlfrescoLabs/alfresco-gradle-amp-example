@@ -8,28 +8,38 @@ repositories {
 }
 
 dependencies {
-    compile group: 'org.alfresco', name: 'alfresco-repository', version: alfrescoVersion, classifier: alfrescoEdition
-	compile group: 'org.alfresco', name: 'alfresco-core', version: alfrescoVersion, classifier: alfrescoEdition
-	compile group: 'org.alfresco', name: 'alfresco-datamodel', version: alfrescoVersion, classifier: alfrescoEdition
-	compile group: 'org.springframework', name: 'spring-core', version: springVersion
-	compile group: 'org.springframework', name: 'spring-beans', version: springVersion
-	compile group: 'org.springframework', name: 'spring-context', version: springVersion
 	compile fileTree(dir: 'lib', include: '**/*.jar')
     testCompile group: 'junit', name: 'junit', version: '4.+'
 }
 
 buildscript {
-//	repositories {
-//		mavenLocal()
-//	}
+//  Enable local repo and artifact below if you've built and installed alfresco-gradle-plugins there
+	
+	repositories {
+		// mavenLocal()
+		mavenCentral()
+		maven {
+			url "http://maven.alfresco.com/nexus/content/groups/public"
+		}
+	}
+	
 	dependencies {
 //		classpath group: 'org.alfresco.gradle', name: 'alfresco-gradle-plugins', version: '1.0-SNAPSHOT'
 		classpath fileTree(dir: 'lib-compile', include: '**/*.jar')
+		
+		// These are needed when alfresco-gradle-plugins is not loaded via repo
+		classpath group: 'org.alfresco', name: 'alfresco-repository', version: alfrescoVersion
+		classpath group: 'org.alfresco', name: 'alfresco-core', version: alfrescoVersion
+		classpath group: 'de.schlichtherle.truezip', name: 'truezip', version: '5.1.2'
+		classpath group: 'org.springframework.extensions.surf', name: 'spring-surf-core', version: '1.0.0'
+		// TODO Figure out why a 'String index out of range' is thrown without this
+		classpath group: 'com.yahoo.platform.yui', name: 'yuicompressor', version: '2.4.6'
 	}
-}
-buildscript {
-   configurations.classpath.resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
+	
+	configurations.classpath.resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
 }
 
+// Apply the alfresco-war-dependencies if you want to get your dependencies from exploding a WAR
 //apply plugin: 'alfresco-war-dependencies'
+
 apply plugin: 'amp'

@@ -50,7 +50,7 @@ and see the results with:
 Installing the AMP
 ------------------
 
-**TODO**
+	gradle installAmp -PwarFile=/Path/To/WAR/File
 
 
 Viewing the Example
