@@ -5,8 +5,11 @@ An example [Alfresco AMP](http://wiki.alfresco.com/wiki/AMP_Files) project to
 demonstrate building with [Gradle](http://gradle.org) and the 
 [alfresco-gradle-plugins](https://github.com/Alfresco/alfresco-gradle-plugins).
 
-The resulting AMP adds an example JSP page that displays a message fetched from
-a Java class which reads the text from a properties file. While that's useless functionality,
+The resulting Share AMP adds an example JSP page that displays a message fetched from
+a Java class which reads the text from a properties file and the repository AMP
+displays a console message on startup.
+
+While that's useless functionality,
 the project ties together many of the possible 
 [AMP deployment touch points](http://wiki.alfresco.com/wiki/Developing_an_Alfresco_Module) and 
 can serve as a guide or template for your project.
@@ -29,10 +32,11 @@ Packaging as an AMP
 
 To package the AMP:
 
-	cd amp-gradle-example
+	cd alfresco-gradle-amp-example
 	gradle amp
 		
-The packaged AMP will be available at `build/distributions/amp-gradle-example-0.1.amp`.
+The packaged AMPs will be available at `my-example-repo/build/distributions/my-example-repo-0.1.0.amp`
+and `my-example-share/build/distributions/my-example-share-0.1.0.amp`.
 
 
 Running Tests
@@ -44,7 +48,12 @@ To run the unit tests:
 		
 and see the results with:
 
-	open build/reports/tests/index.html 
+	open my-example-repo/build/reports/tests/index.html
+
+and
+
+	open my-example-share/build/reports/tests/index.html 
+
 
 
 Installing the AMP
