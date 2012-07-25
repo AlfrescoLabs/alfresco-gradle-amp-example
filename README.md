@@ -3,7 +3,7 @@ Overview
 
 An example [Alfresco AMP](http://wiki.alfresco.com/wiki/AMP_Files) project to
 demonstrate building with [Gradle](http://gradle.org) and the 
-[alfresco-gradle-plugins](https://github.com/Alfresco/alfresco-gradle-plugins).
+[alfresco-gradle-plugins](https://github.com/AlfrescoLabs/alfresco-gradle-plugins).
 
 The resulting Share AMP adds an example JSP page that displays a message fetched from
 a Java class which reads the text from a properties file and the repository AMP
