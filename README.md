@@ -14,7 +14,7 @@ the project ties together many of the possible
 [AMP deployment touch points](http://wiki.alfresco.com/wiki/Developing_an_Alfresco_Module) and 
 can serve as a guide or template for your project.
 
-See the [alfresco-gradle-plugins](https://github.com/Alfresco/alfresco-gradle-plugins) project
+See the [alfresco-gradle-plugins](https://github.com/AlfrescoLabs/alfresco-gradle-plugins) project
 for full details on use of the plugins.
 
 ### Requirements
