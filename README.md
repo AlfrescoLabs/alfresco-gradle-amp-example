@@ -22,7 +22,7 @@ for full details on use of the plugins.
 The project currently requires that Gradle and [Maven](http://maven.apache.org) be installed.
 
 A complied jar of the  
-[alfresco-gradle-plugins](https://github.com/Alfresco/alfresco-gradle-plugins) project is included
+[alfresco-gradle-plugins](https://github.com/AlfrescoLabs/alfresco-gradle-plugins) project is included
 in `lib-compile` as a buildscript dependency by default, or you can use a version in your local 
 Maven repository.
 
