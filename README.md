@@ -59,17 +59,22 @@ and
 Installing the AMP
 ------------------
 
+You can use the plugin to call on MMT to install the AMP in your WAR file:
+
 	gradle installAmp -PwarFile=/Path/To/WAR/File
+
+Note that this should be run from each subproject or both AMPs would be installed in the same WAR file.
 
 
 Viewing the Example
 -------------------
 
 The endpoint depends on your environment and where you've installed the AMP but 
-here's an example URL:
+here's an example URL for seeing confirmation of the share AMP changes:
 
 	http://localhost:8080/share/jsp/example.jsp
 
+Watch the startup logs of your repo instance for a message indicating the repo AMP is present.
 	
 License
 -------
